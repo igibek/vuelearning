@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+</head>
+<body>
+    <div id="root" class="container">
+        <tabs>
+            <tab name="About us" :selected="true">
+                <p>This is content of us tab!</p>
+            </tab>
+            <tab name="About Mission">
+                <p>This is content of mission tab!</p>
+            </tab>
+            <tab name="About Vision">
+                <p>This is content of vision tab!</p>
+            </tab>
+        </tabs>
+
+        <coupon @applied="onCouponApplied"></coupon>
+        <h1 v-show="isApplied">You coupon was applied</h1>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/bulma.js"></script>
+</body>
+</html>
